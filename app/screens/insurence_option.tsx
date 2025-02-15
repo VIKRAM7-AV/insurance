@@ -43,16 +43,18 @@ export default function Insurance_options() {
       <Swiper
         ref={swiperRef}
         className="justify-between mx-auto max-w-[1970px] px-4"
-        slidesPerView={1.2} 
+        slidesPerView={1} 
         breakpoints={{
-          640: { slidesPerView: 2 },
+          500: { slidesPerView: 1.2 },
+          600: { slidesPerView: 1.5 },
+          800: { slidesPerView: 2 },
           1024: { slidesPerView: 3 },
         }}
         navigation={false}
         pagination={{ clickable: true }}
         modules={[Pagination, Navigation, Autoplay]}
         autoplay={{
-          delay: 5000,
+          delay: 4000,
           disableOnInteraction: false, 
         }}
         loop={true}
@@ -65,7 +67,7 @@ export default function Insurance_options() {
                 alt="SliderImages"
                 width={359}
                 height={100}
-                className="rounded-3xl shadow-lg"
+                className="rounded-3xl shadow-lg sm:h-auto"
               />
               <h1 className="absolute mt-10 ml-8 mr-8 inset-0 text-white text-2xl font-semibold">
                 {item.head}
@@ -76,7 +78,7 @@ export default function Insurance_options() {
               <p className="absolute mt-20 ml-8 mr-32 inset-0 text-white text-xs font-medium">
                 {item.discription}
               </p>
-              <p className="absolute mt-40 ml-8 mr-32 inset-0 bg-white text-sm font-semibold text-gray-900 hover:text-blue-700 duration-200 border-0 rounded-full flex items-center justify-center w-32 h-8">
+              <p className="absolute md:mt-40 mt-36 ml-8 mr-32 inset-0 bg-white text-sm font-semibold text-gray-900 hover:text-blue-700 duration-200 border-0 rounded-full flex items-center justify-center w-32 h-8">
                 View Products
               </p>
             </div>

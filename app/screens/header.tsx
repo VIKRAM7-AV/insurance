@@ -21,7 +21,7 @@ export default function Home_first() {
           </p>
         </div>
 
-        <div className="mt-10 flex flex-row justify-center lg:flex-row items-center lg:items-start gap-6 lg:gap-12">
+        <div className="mt-10 flex flex-col justify-center lg:flex-row items-center lg:items-start gap-6 lg:gap-12">
           <div className="flex items-center">
             <Image src={option} alt="Option" width={50} height={50} />
             <p className="ml-4 text-blue-800">
