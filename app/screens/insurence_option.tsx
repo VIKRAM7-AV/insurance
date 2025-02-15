@@ -17,20 +17,14 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog"
 import { DialogTrigger } from "@radix-ui/react-dialog"
+import { category_type } from "../types/global"
 
-interface CategoryItem {
-  image: string;
-  head: string;
-  heads: string;
-  discription: string;
-  url: any;
-}
 
 export default function Insurance_options() {
-  const [selectedItem, setSelectedItem] = useState<CategoryItem | null>(null); 
+  const [selectedItem, setSelectedItem] = useState<category_type | null>(null); 
   const swiperRef = useRef<SwiperRef | null>(null); 
 
-  const openDialog = (item: any) => {
+  const openDialog = (item: category_type) => {
     setSelectedItem(item); 
   };
 
@@ -91,7 +85,7 @@ export default function Insurance_options() {
       </Swiper>
 
       <Dialog open={!!selectedItem} onOpenChange={(open) => !open && setSelectedItem(null)}>
-        <DialogContent className={`${selectedItem?.url?.length > 4 ? "w-full md:max-w-[800px]" : ""} w-[77%] rounded-lg`}>
+        <DialogContent className={`${selectedItem?.url && selectedItem.url.length > 4 ? "w-full md:max-w-[800px]" : ""} w-[77%] rounded-lg`}>
           <DialogHeader>
             <DialogTitle>{selectedItem?.head || "Default Title"}</DialogTitle>
             <DialogDescription>

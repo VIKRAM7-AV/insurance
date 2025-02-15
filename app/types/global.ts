@@ -1,15 +1,22 @@
-type category_type={
-    image:any,
-    heads:String,
-    discription:String,
-    head:string,
-    url:any,
-}
+export interface category_type {
+    image: string;
+    head: string;
+    heads: string;
+    discription: string;
+    url: UrlItem[];
+  }
 
-type planstypes={
+export type UrlItem = {
+    image: string;
+    head: string;
+    discription?: string;
+    url: string;
+  };
+
+export type Planstypes={
     id:number,
     title:string,
     subtitle:string,
-    url:any,
+    url:string,
 }
 

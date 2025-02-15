@@ -1,4 +1,6 @@
-  export const plans :planstypes[]=[
+import { category_type, Planstypes } from "../types/global"
+
+  export const plans :Planstypes[]=[
     {id:111,title:"LIC Plans",subtitle:"Investment",url:''},
     {id:211,title:"Return of Premium",subtitle:"Term Life",url:''},
     {id:311,title:"Life Insurance for Housewives",subtitle:"Term Life",url:''},
